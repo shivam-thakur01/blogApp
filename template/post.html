@@ -1,0 +1,12 @@
+{% extends 'base.html' %} {% block title %} {{posts.title}}-BLOG Wala {% endblock %} 
+{% block content %}
+<div class="container">
+    <h3 style="text-align: center;">{{posts.title}}</h3>
+    <h6 style="text-align: end;"><b>Category: <a href="/category/{{posts.cat.url}}"><u>{{posts.cat.title}}</u></a></b></h6>
+    <div class="container">
+        <img src="/media/{{posts.image}}" alt="" style="display:block;height: 300px;width: 550px;margin: auto;border: 1px solid black;" class="responsive-img">
+    </div>
+
+    <p>{{posts.content | safe}}</p>
+</div>
+{% endblock %}

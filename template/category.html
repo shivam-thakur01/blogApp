@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block title %}{{category.title}} Category-BLOG Wala{% endblock %} 
+{% block content %}
+<div class='container'>
+    <h4> Category: {{category.title}}</h4>
+    <img src="/media/{{category.image}}" alt="" class="responsive-img" style="height: 300px; width:100%; object-fit: cover;border: 1px solid black;">
+    <h5>Category Description: </h5>
+    <h6 style="margin-bottom:15px;">{{category.discription}}</h6>
+    <div class="collection">
+        {% for post in posts%}
+        <a href="/blogs/{{post.url}}" class="collection-item" style="color: #355d9e ;">{{post.title}} </a> 
+        {% empty %}
+        <h6>No posts in this category...</h6>
+        {% endfor %}
+    </div>
+</div>
+
+    {% endblock %}

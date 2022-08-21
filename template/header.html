@@ -1,0 +1,21 @@
+<!-- Dropdown Structure -->
+<ul id="dropdown1" class="dropdown-content">
+    {% for cat in cats%}
+    <li><a href="/category/{{cat.url}}" style="color: #355d9e ;">{{cat.title}}</a></li>
+    {% endfor %}
+  </ul>
+  <nav style="background: #355d9e;">
+    <div class="container">
+        <div class="nav-wrapper">
+            <a href="/blogs" >BLOG Wala</a>
+            {% comment %} class="brand-logo"  hide-on-med-and-down{% endcomment %}
+            <ul class="right">
+                <li><a href="/admin">Admin</a></li>
+                {% comment %} <li><a href="badges.html">About</a></li> {% endcomment %}
+                <!-- Dropdown Trigger -->
+                <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Category<i class="material-icons right">arrow_drop_down</i></a></li>
+            </ul>
+        </div>
+    </div>
+  </nav>
+      
